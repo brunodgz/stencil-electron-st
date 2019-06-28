@@ -1,0 +1,18 @@
+header {
+  background: #5851ff;
+  color: white;
+  height: 56px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 0 12px;
+}

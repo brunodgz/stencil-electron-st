@@ -1,0 +1,1 @@
+header{background:#5851ff;height:56px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);box-shadow:0 2px 5px 0 rgba(0,0,0,.26)}h1,header{color:#fff}h1{font-size:1.4rem;font-weight:500;padding:0 12px}

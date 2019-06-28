@@ -6,17 +6,18 @@
   "description": "Stencil App Starter",
   "scripts": {
     "build": "stencil build --es5 && node parseHTML.js pro",
-    "start": "concurrently \"stencil build --dev --es5 --watch --serve\" \"wait-on http://localhost:3333 && electron .\"",
+    "start": "npm run clean:js && concurrently \"stencil build --dev --es5 --watch --serve\" \"wait-on http://localhost:3333 && electron .\"",
     "test": "stencil test --spec --e2e",
     "electron": "node parseHTML.js dev && electron .",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "pack": "yarn run build && electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
     "dist": "stencil build && node parseHTML.js pro && electron-builder",
+    "clean:js": "del-cli www/",
     "parse": "node parseHTML.js dev"
   },
   "dependencies": {
-    "@stencil/core": "~0.18.0",
+    "@stencil/core": "0.18.0",
     "@stencil/router": "~0.3.1",
     "electron-is-dev": "^1.0.1"
   },
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@types/node": "^11.9.5",
     "concurrently": "^4.1.0",
+    "del-cli": "^2.0.0",
     "electron": "^4.0.5",
     "electron-builder": "^20.38.5",
     "wait-on": "^3.2.0",
