@@ -6,7 +6,7 @@
   "description": "Stencil App Starter",
   "scripts": {
     "build": "stencil build --es5 && node parseHTML.js pro",
-    "start": "npm run clean:js && concurrently \"stencil build --dev --es5 --watch --serve\" \"wait-on http://localhost:3333 && electron .\"",
+    "start": "npm run clean:js && concurrently \"stencil build --dev --es5 --watch --serve\" \"wait-on http://localhost:3333/index.html && electron .\"",
     "test": "stencil test --spec --e2e",
     "electron": "node parseHTML.js dev && electron .",
     "test.watch": "stencil test --spec --e2e --watchAll",
